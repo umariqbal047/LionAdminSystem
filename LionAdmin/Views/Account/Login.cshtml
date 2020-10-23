@@ -1,0 +1,60 @@
+﻿@model LogInViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-form-title" style="background-image: url(images/bg-01.jpg);">
+                    <span class="login100-form-title-1">
+                        Sign In
+                    </span>
+                </div>
+
+                <form asp-action="logIn" asp-controller="Account">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                        <span class="label-input100">Username</span>
+                        <input class="input100" type="text" name="Username" required placeholder="Enter username">
+                        <span class="focus-input100"></span>
+                        <span asp-validation-for="Username" class="text-danger"></span>
+
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
+
+                        <span class="label-input100">Password</span>
+                        <input class="input100" type="password" name="Password" required placeholder="Enter password">
+                        <span class="focus-input100"></span>
+                        <span asp-validation-for="Username" class="text-danger"></span>
+
+                    </div>
+
+                    <div class="flex-sb-m w-full p-b-30" style="margin-left:8px;">
+                        <div class="contact100-form-checkbox">
+                            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                            <label class="label-checkbox100" for="ckb1">
+                                Remember me
+                            </label>
+                        </div>
+
+                        <div style="margin-right:22px;">
+                            <a href="#" class="txt1">
+                                Forgot Password?
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn">
+                            Login
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+   

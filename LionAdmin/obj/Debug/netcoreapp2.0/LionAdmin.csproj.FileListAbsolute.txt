@@ -1,0 +1,4 @@
+E:\PersonalProjects\LionAdmin\LionAdmin\obj\Debug\netcoreapp2.0\LionAdmin.csprojAssemblyReference.cache
+E:\PersonalProjects\LionAdmin\LionAdmin\obj\Debug\netcoreapp2.0\LionAdmin.AssemblyInfoInputs.cache
+E:\PersonalProjects\LionAdmin\LionAdmin\obj\Debug\netcoreapp2.0\LionAdmin.AssemblyInfo.cs
+E:\PersonalProjects\LionAdmin\LionAdmin\obj\Debug\netcoreapp2.0\LionAdmin.csproj.CoreCompileInputs.cache

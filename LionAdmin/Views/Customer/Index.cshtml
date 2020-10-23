@@ -1,0 +1,132 @@
+﻿@model LionAdmin.Service.CustomersViewModel
+@{
+    ViewData["Title"] = "Home Page";
+
+}
+
+<style>
+
+    
+    
+
+</style>
+
+<div class="col-sm-12 bac-color">
+
+    <div class="col-xs-2 form-group">
+
+        <a class="btn btn-success addBookingbtn txtClr " onclick="AddNewCustomer()">Add</a>
+    </div>
+    <div class="table-responsive date-margin">
+
+        <table class="table table-bordered" id="BookingDataTable">
+
+            <thead>
+                <tr class="">
+
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone No</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Home Address</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                    <th>Action</th>
+
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+
+
+@section scripts {
+
+    <script>
+
+     $(document).ready(function () {
+            //$("#MyDataTable1").DataTable();
+            BindDataTable();
+
+     })
+
+        var oTable;
+        var FilterRecord = function () {
+
+            BindDataTable();
+        }
+
+        var BindDataTable = function (response) {
+
+            if ($.fn.DataTable.isDataTable("#BookingDataTable")) {
+                oTable.draw();
+
+            }
+            else {
+                oTable = $("#BookingDataTable").DataTable({
+                    "responsive": true,
+                    "bServerSide": true,
+                    "sAjaxSource": '@Url.Action("GetAllCustomer", "Customer")',
+                    "fnServerData": function (sSource, aoData, fnCallback) {
+                        var EName = $("#EName").val();
+                        aoData.push({ "name": "EName", "value": EName });
+                        $.ajax({
+                            type: "Get",
+                            data: aoData,
+                            url: sSource,
+                            success: fnCallback
+                        });
+
+                    },
+                    "aoColumns": [
+
+
+                        { "mData": "firstName" },
+                        { "mData": "lastName" },
+                        { "mData": "phonNo" },
+                        { "mData": "email" },
+                        { "mData": "companyAddress" },
+                        { "mData": "homeAddress" },
+                        { "mData": "customerStatus" },
+                        {
+                            "mData": "id",
+                            "render": function (id, type, full, meta) {
+                                return '<a class="btn btn-dark" style="padding: 0px 8px;"  href="@Url.Action("DisableCustomer", "Customer")/' + id +'" onclick="return confirm(' + "'You want to InActive Status ?'" + ')">Status</a>'
+                            }
+                        },
+                        @*{
+                            "mData": function (data, type,  dataToSet) {
+                                return '<a class="btn btn-success ' + (data.bookinStatus == true ? "disabled" : "") + '"   href="@Url.Action("BookingChecked", "Booking")/' + data.id +'" onclick="return confirm("Are you sure? You want to checked this booking")">Check In</a>'
+                            }
+                        },*@
+                         {
+                            "mData": "id",
+                            "render": function (id, type, full, meta) {
+                                return '<a class="btn btn-success"  style="padding: 0px 8px;" onclick="EditCustomer('+"'" +id+"'" +')">Edit</a>'
+                            }
+                        }
+
+
+                    ]
+
+                });
+            }
+        }
+
+
+        function AddNewCustomer() {
+            window.location.href="/Customer/Create"
+        }
+        function EditCustomer(guid) {
+            var id = guid;
+            window.location.href = "/Customer/GetCustomerById?customerId=" + id;
+        }
+        //function DisableCustomer(guid) {
+        //    var id = guid;
+        //    window.location.href = "/Customer/GetCustomerById?customerId=" + id;
+        //}
+    </script>
+
+}
