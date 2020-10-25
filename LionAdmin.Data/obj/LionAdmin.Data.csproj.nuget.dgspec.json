@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\PersonalProjects\\LionAdmin\\LionAdmin.Data\\LionAdmin.Data.csproj": {}
+    "E:\\PersonalProjects\\LionAdminSystem\\LionAdmin.Data\\LionAdmin.Data.csproj": {}
   },
   "projects": {
-    "E:\\PersonalProjects\\LionAdmin\\LionAdmin.Data\\LionAdmin.Data.csproj": {
+    "E:\\PersonalProjects\\LionAdminSystem\\LionAdmin.Data\\LionAdmin.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\PersonalProjects\\LionAdmin\\LionAdmin.Data\\LionAdmin.Data.csproj",
+        "projectUniqueName": "E:\\PersonalProjects\\LionAdminSystem\\LionAdmin.Data\\LionAdmin.Data.csproj",
         "projectName": "LionAdmin.Data",
-        "projectPath": "E:\\PersonalProjects\\LionAdmin\\LionAdmin.Data\\LionAdmin.Data.csproj",
+        "projectPath": "E:\\PersonalProjects\\LionAdminSystem\\LionAdmin.Data\\LionAdmin.Data.csproj",
         "packagesPath": "C:\\Users\\Estrats\\.nuget\\packages\\",
-        "outputPath": "E:\\PersonalProjects\\LionAdmin\\LionAdmin.Data\\obj\\",
+        "outputPath": "E:\\PersonalProjects\\LionAdminSystem\\LionAdmin.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

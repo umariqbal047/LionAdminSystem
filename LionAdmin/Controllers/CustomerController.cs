@@ -24,15 +24,12 @@ namespace LionAdmin.Controllers
         {
             return View();
         }
-        public IActionResult Create()
-        {
-            return View();
-        }
+       
         [HttpPost]
         public IActionResult Create(CustomersViewModel model)
         {
-            _customerServices.CreateCustomer(model);
-            return RedirectToAction("Index");
+           var result= _customerServices.CreateCustomer(model);
+            return Json(result);
         }
 
         public JsonResult GetAllCustomer(DataTablesParam param, string EName)
@@ -106,27 +103,35 @@ namespace LionAdmin.Controllers
 
         }
 
+        //public IActionResult GetCustomerById(string GetCustomerById)
+        //{
+        //    return RedirectToAction("Eidt", "Customer", new { Id = customerId });
+        //}
         public IActionResult GetCustomerById(string customerId)
         {
-            return RedirectToAction("Eidt", "Customer", new { Id = customerId });
-        }
-        public IActionResult Eidt(string Id)
-        {
-            var model= _customerServices.GetCustomerById(Id);
-            return View(model);
+            var model= _customerServices.GetCustomerById(customerId);
+           // return Json(model);
+            return PartialView("_EditCustomer", model);
         }
         [HttpPost]
         public IActionResult Edit(CustomersViewModel model)
         {
-            _customerServices.UpdateCustomer(model);
-            return RedirectToAction("Index");
+            var res = "";
+            var customr=_customerServices.UpdateCustomer(model);
+            if (customr !=null)
+                return Json(customr);
+
+
+            return Json(res);
         }
 
+        [HttpPost]
         public IActionResult DisableCustomer(string Id)
         {
-            
+            var result = "success";
+
            _customerServices.DeleteCustomer(Id);
-            return RedirectToAction("Index");
+            return Json(result);
         }
 
 

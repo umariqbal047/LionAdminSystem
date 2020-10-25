@@ -80,24 +80,40 @@ namespace LionAdmin.Service.Services.Implementation
             return customerList;
         }
 
-        public void UpdateCustomer(CustomersViewModel model)
+        public string UpdateCustomer(CustomersViewModel model)
         {
-            var customerGuid = model.Id;
-            var editproject = _customerRepository.GetCustomerById(customerGuid);
+            try
             {
-                editproject.FirstName = model.FirstName;
-                editproject.LastName = model.LastName;
-                editproject.PhoneNumber = model.PhoneNumber;
-                editproject.Description = model.Description;
-                editproject.CompanyAddress = model.CompanyAddress;
-                editproject.Gender = model.Gender.ToString();
-                editproject.EmailAddress = model.EmailAddress;
-                editproject.HomeAddress = model.HomeAddress;
-                editproject.Updated = DateTime.Now;
+                string result;
+                var customerGuid = model.Id;
+                var editproject = _customerRepository.GetCustomerById(customerGuid);
+                {
+                    editproject.FirstName = model.FirstName;
+                    editproject.LastName = model.LastName;
+                    editproject.PhoneNumber = model.PhoneNumber;
+                    editproject.Description = model.Description;
+                    editproject.CompanyAddress = model.CompanyAddress;
+                    editproject.Gender = model.Gender.ToString();
+                    editproject.EmailAddress = model.EmailAddress;
+                    editproject.HomeAddress = model.HomeAddress;
+                    editproject.Updated = DateTime.Now;
 
+                }
+                var custoemrUpdate = _customerRepository.UpdateCustomer(editproject);
+                if (custoemrUpdate != null)
+                {
+                    var customerId = custoemrUpdate.Id.ToString();
+                    return result = customerId;
+
+                }
+                return result = "";
             }
-            _customerRepository.UpdateCustomer(editproject);
+            catch (Exception e)
+            {
 
+                throw;
+            }
+           
         }
     }
 }

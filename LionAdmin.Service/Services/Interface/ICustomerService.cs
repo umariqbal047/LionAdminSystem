@@ -10,7 +10,7 @@ namespace LionAdmin.Service.Services.Interface
         List<CustomersViewModel> GetCustomerList();
         CustomersViewModel GetCustomerById(string customerId);
         CustomersViewModel CreateCustomer(CustomersViewModel customerViewModel);
-        void UpdateCustomer(CustomersViewModel updateCustomeViewrModel);
+        string UpdateCustomer(CustomersViewModel updateCustomeViewrModel);
         void DeleteCustomer(string customerId);
     }
 }

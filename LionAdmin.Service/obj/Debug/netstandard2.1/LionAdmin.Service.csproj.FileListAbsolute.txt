@@ -12,3 +12,17 @@ E:\PersonalProjects\LionAdmin\LionAdmin.Service\obj\Debug\netstandard2.1\LionAdm
 E:\PersonalProjects\LionAdmin\LionAdmin.Service\obj\Debug\netstandard2.1\LionAdmin.Service.csproj.CopyComplete
 E:\PersonalProjects\LionAdmin\LionAdmin.Service\obj\Debug\netstandard2.1\LionAdmin.Service.dll
 E:\PersonalProjects\LionAdmin\LionAdmin.Service\obj\Debug\netstandard2.1\LionAdmin.Service.pdb
+E:\PersonalProjects\LionAdminSystem\LionAdmin.Service\bin\Debug\netstandard2.1\LionAdmin.Service.deps.json
+E:\PersonalProjects\LionAdminSystem\LionAdmin.Service\bin\Debug\netstandard2.1\LionAdmin.Service.dll
+E:\PersonalProjects\LionAdminSystem\LionAdmin.Service\bin\Debug\netstandard2.1\LionAdmin.Service.pdb
+E:\PersonalProjects\LionAdminSystem\LionAdmin.Service\bin\Debug\netstandard2.1\LionAdmin.Data.dll
+E:\PersonalProjects\LionAdminSystem\LionAdmin.Service\bin\Debug\netstandard2.1\LionAdmin.Repository.dll
+E:\PersonalProjects\LionAdminSystem\LionAdmin.Service\bin\Debug\netstandard2.1\LionAdmin.Repository.pdb
+E:\PersonalProjects\LionAdminSystem\LionAdmin.Service\bin\Debug\netstandard2.1\LionAdmin.Data.pdb
+E:\PersonalProjects\LionAdminSystem\LionAdmin.Service\obj\Debug\netstandard2.1\LionAdmin.Service.csprojAssemblyReference.cache
+E:\PersonalProjects\LionAdminSystem\LionAdmin.Service\obj\Debug\netstandard2.1\LionAdmin.Service.AssemblyInfoInputs.cache
+E:\PersonalProjects\LionAdminSystem\LionAdmin.Service\obj\Debug\netstandard2.1\LionAdmin.Service.AssemblyInfo.cs
+E:\PersonalProjects\LionAdminSystem\LionAdmin.Service\obj\Debug\netstandard2.1\LionAdmin.Service.csproj.CoreCompileInputs.cache
+E:\PersonalProjects\LionAdminSystem\LionAdmin.Service\obj\Debug\netstandard2.1\LionAdmin.Service.csproj.CopyComplete
+E:\PersonalProjects\LionAdminSystem\LionAdmin.Service\obj\Debug\netstandard2.1\LionAdmin.Service.dll
+E:\PersonalProjects\LionAdminSystem\LionAdmin.Service\obj\Debug\netstandard2.1\LionAdmin.Service.pdb

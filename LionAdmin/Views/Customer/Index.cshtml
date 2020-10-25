@@ -5,10 +5,6 @@
 }
 
 <style>
-
-    
-    
-
 </style>
 
 <div class="col-sm-12 bac-color">
@@ -42,9 +38,234 @@
 </div>
 
 
+
+
+<div class="modal fade bd-example-modal-lg" id="userModel" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"> User Time app </h5>
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+            </div>
+            <div class="modal-body" id="addUserForm">
+
+                <form id="myform">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-4">
+
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="form-group">
+                                        <label asp-for="FirstName" class="control-label"></label>
+                                        <input asp-for="FirstName" class="form-control"  name="nameValidation" id="firstName" required />
+                                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label asp-for="LastName" class="control-label"></label>
+                                        <input asp-for="LastName" class="form-control" name="lnameValidation" required id="lastName"  />
+                                        <span asp-validation-for="LastName" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label asp-for="PhoneNumber" class="control-label"></label>
+                                        <input asp-for="PhoneNumber" class="form-control" name="phoneValidation" required id="phoneNumber" />
+                                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label class="form-group" style="width:100%">
+                                        <label asp-for="Gender" class="control-label"></label>
+
+                                        <select asp-for="Gender" class="form-control" asp-items="Html.GetEnumSelectList<Gender>()" id="gender"></select>
+
+                                    </label>
+
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label asp-for="EmailAddress" class="control-label"></label>
+                                        <input asp-for="EmailAddress" class="form-control" id="email" />
+                                        <span asp-validation-for="EmailAddress" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label asp-for="CompanyAddress" class="control-label"></label>
+                                        <input asp-for="CompanyAddress" class="form-control" name="companyValidation" id="companyAddress" required />
+                                        <span asp-validation-for="CompanyAddress" class="text-danger"></span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label asp-for="HomeAddress" class="control-label"></label>
+                                        <input asp-for="HomeAddress" class="form-control" name="homeValidation" required id="homeAddress" />
+                                        <span asp-validation-for="HomeAddress" class="text-danger"></span>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label asp-for="Description" class="control-label"></label>
+                                        <input asp-for="Description" class="form-control" name="description"  id="description" required />
+                                        <span asp-validation-for="Description" class="text-danger"></span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group" style="float:right">
+                                <input type="submit" value="Create" onclick="SaveCustomer()" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade bd-example-modal-lg" id="CustomerModalEdit" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"> Edit Customer</h5>
+
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+
+            </div>
+            <div class="modal-body" id="customerditdata">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="modal fade bd-example-modal-lg" id="UserModalEdit" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"> User Time app </h5>
+
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+
+            </div>
+            <div class="modal-body" id="userditdata">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+            </div>
+            <div class="modal-body">
+                <h6>Are you sure ? You want to disable this. </h6>
+
+                <div style="text-align:center;display:none" id="loaderDiv">
+                    <img src="~/Content/InternetSlowdown_Day.gif" width="150" />
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
+                <a href="#" class="btn btn-success" onclick="DisableCustomerStatus()">Confirm</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <input type="hidden" id="customerId" />
+</div>
+
+
+
+
+
+
 @section scripts {
 
     <script>
+
+        $(document).ready(function () {
+
+            $('#myform').validate({ // initialize the plugin
+                rules: {
+                    nameValidation: {
+                        required: true
+                    },
+                    lnameValidation: {
+                        required: true
+                    },
+                    phoneValidation: {
+                        required: true,
+                        minlength:11
+                        
+                    },
+                    //messages: {
+                    //    phoneValidation: {
+                    //        required: 'please Enter valid'
+                    //    },
+                    companyValidation: {
+                        required: true
+                    },
+                    homeValidation: {
+                        required: true
+                    },
+                    description: {
+                        required: true
+                    },
+
+                    
+                }
+            });
+
+        });
+
+      
+
+
+
+
 
      $(document).ready(function () {
             //$("#MyDataTable1").DataTable();
@@ -93,14 +314,10 @@
                         {
                             "mData": "id",
                             "render": function (id, type, full, meta) {
-                                return '<a class="btn btn-dark" style="padding: 0px 8px;"  href="@Url.Action("DisableCustomer", "Customer")/' + id +'" onclick="return confirm(' + "'You want to InActive Status ?'" + ')">Status</a>'
+                                //return '<a class="btn btn-dark" style="padding: 0px 8px;"     href="@Url.Action("DisableCustomer", "Customer")/' + id + '" onclick="return confirm(' + "'You want to InActive Status ?'" + ')">Status</a>'
+                                return '<a class="btn btn-dark" style="padding: 0px 8px; color:white;"   onclick="ConfirmDelete(' + "'"+id+"'" + ')">Status</a>'
                             }
                         },
-                        @*{
-                            "mData": function (data, type,  dataToSet) {
-                                return '<a class="btn btn-success ' + (data.bookinStatus == true ? "disabled" : "") + '"   href="@Url.Action("BookingChecked", "Booking")/' + data.id +'" onclick="return confirm("Are you sure? You want to checked this booking")">Check In</a>'
-                            }
-                        },*@
                          {
                             "mData": "id",
                             "render": function (id, type, full, meta) {
@@ -116,17 +333,157 @@
         }
 
 
+      
         function AddNewCustomer() {
-            window.location.href="/Customer/Create"
+            $("#userModel").modal().show();
         }
+
+        function SaveCustomer() {
+            $("#myform").validate();
+
+            var firstName =     $("#firstName").val();
+            var lastName =      $("#lastName").val();
+            var phoneNumber =   $("#phoneNumber").val();
+            var gender =        $("#gender").val();
+            var email =         $("#email").val();
+            var companyAddress = $("#companyAddress").val();
+            var homeAddress =    $("#homeAddress").val();
+            var description =     $("#description").val();
+            var data = {
+                FirstName: firstName,
+                LastName: lastName,
+                PhoneNumber: phoneNumber,
+                Gender: gender,
+                EmailAddress: email,
+                CompanyAddress: companyAddress,
+                HomeAddress: homeAddress,
+                Description: description,
+            };
+
+
+             $.ajax({
+                url: '@Url.Action("Create", "Customer")',
+                type: "POST",
+                 data: { model: data },
+                success: function (result) {
+                    if (result != null) {
+                        location.reload();
+
+                        $("#firstName").val("");
+                        $("#lastName").val("");
+                        $("#phoneNumber").val("");
+                        $("#gender").val("");
+                        $("#email").val("");
+                        $("#companyAddress").val("");
+                        $("#homeAddress").val("");
+                        $("#description").val("");
+                        
+                    }
+                    else {
+                        alert("Error");
+                    }
+                },
+
+            });
+        }
+
+
+
+
+
         function EditCustomer(guid) {
             var id = guid;
-            window.location.href = "/Customer/GetCustomerById?customerId=" + id;
+
+             $.ajax({
+                url: '@Url.Action("GetCustomerById", "Customer")',
+                type: "POST",
+                 data: { customerId: id },
+                 success: function (result) {
+                         $('#customerditdata').html(result);
+                         $("#CustomerModalEdit").modal().show();
+
+                         //$("#customerditdata").find("input#FirstName").val(result.FirstName)
+                         //$("#firstName").val(result.FirstName);
+                         //$("#lastName").val(result.lastName);
+                         //$("#phoneNumber").val(result.phoneNumber);
+                         //$("#gender").val(result.gender);
+                         //$("#email").val(result.email);
+                         //$("#companyAddress").val(result.companyAddress);
+                         //$("#homeAddress").val(result.homeAddress);
+                         //$("#description").val(result.description);
+                },
+                error: function (result) {
+                    alert("exception: " + result);
+                }
+            });
+          
         }
-        //function DisableCustomer(guid) {
-        //    var id = guid;
-        //    window.location.href = "/Customer/GetCustomerById?customerId=" + id;
-        //}
+
+        function EditSaveCustomer() {
+
+            $("#formValidationEditCustomer").validate();
+
+
+            var firstName = $("#editfirstName").val();
+            var lastName = $("#editlastName").val();
+            var phoneNumber = $("#editphoneNumber").val();
+            var gender = $("#editgender").val();
+            var email = $("#editemail").val();
+            var companyAddress = $("#editcompanyAddress").val();
+            var homeAddress = $("#edithomeAddress").val();
+            var description = $("#editdescription").val();
+            var customerId = $("#customerId").val();
+
+            var data = {
+                FirstName: firstName,
+                LastName: lastName,
+                PhoneNumber: phoneNumber,
+                Gender: gender,
+                EmailAddress: email,
+                CompanyAddress: companyAddress,
+                HomeAddress: homeAddress,
+                Description: description,
+                Id: customerId
+            };
+             $.ajax({
+                url: '@Url.Action("Edit", "Customer")',
+                type: "POST",
+                 data: { model: data },
+                success: function (result) {
+                    if (result != null) {
+                        location.reload(); 
+                    }
+                    else {
+                        alert("Error");
+                    }
+                },
+
+            });
+
+        }
+
+        var ConfirmDelete = function (id) {
+            $("#customerId").val(id);
+            $("#myModal").modal('show');
+
+        }
+
+       
+
+        function DisableCustomerStatus() {
+            var id = $("#customerId").val();
+
+            $.post("/Customer/DisableCustomer", { Id: id }, function (data) {
+                if (data != null) {
+                    location.reload();
+                }
+                else {
+                    alert("Error");
+                }
+            });
+        }
+
+
     </script>
 
 }

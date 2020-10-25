@@ -7,3 +7,12 @@ E:\PersonalProjects\LionAdmin\LionAdmin.Data\obj\Debug\netstandard2.1\LionAdmin.
 E:\PersonalProjects\LionAdmin\LionAdmin.Data\obj\Debug\netstandard2.1\LionAdmin.Data.csproj.CoreCompileInputs.cache
 E:\PersonalProjects\LionAdmin\LionAdmin.Data\obj\Debug\netstandard2.1\LionAdmin.Data.dll
 E:\PersonalProjects\LionAdmin\LionAdmin.Data\obj\Debug\netstandard2.1\LionAdmin.Data.pdb
+E:\PersonalProjects\LionAdminSystem\LionAdmin.Data\bin\Debug\netstandard2.1\LionAdmin.Data.deps.json
+E:\PersonalProjects\LionAdminSystem\LionAdmin.Data\bin\Debug\netstandard2.1\LionAdmin.Data.dll
+E:\PersonalProjects\LionAdminSystem\LionAdmin.Data\bin\Debug\netstandard2.1\LionAdmin.Data.pdb
+E:\PersonalProjects\LionAdminSystem\LionAdmin.Data\obj\Debug\netstandard2.1\LionAdmin.Data.csprojAssemblyReference.cache
+E:\PersonalProjects\LionAdminSystem\LionAdmin.Data\obj\Debug\netstandard2.1\LionAdmin.Data.AssemblyInfoInputs.cache
+E:\PersonalProjects\LionAdminSystem\LionAdmin.Data\obj\Debug\netstandard2.1\LionAdmin.Data.AssemblyInfo.cs
+E:\PersonalProjects\LionAdminSystem\LionAdmin.Data\obj\Debug\netstandard2.1\LionAdmin.Data.csproj.CoreCompileInputs.cache
+E:\PersonalProjects\LionAdminSystem\LionAdmin.Data\obj\Debug\netstandard2.1\LionAdmin.Data.dll
+E:\PersonalProjects\LionAdminSystem\LionAdmin.Data\obj\Debug\netstandard2.1\LionAdmin.Data.pdb

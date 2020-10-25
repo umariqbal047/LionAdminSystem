@@ -6988,11 +6988,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\PersonalProjects\\LionAdmin\\LionAdmin.Service\\LionAdmin.Service.csproj",
+      "projectUniqueName": "E:\\PersonalProjects\\LionAdminSystem\\LionAdmin.Service\\LionAdmin.Service.csproj",
       "projectName": "LionAdmin.Service",
-      "projectPath": "E:\\PersonalProjects\\LionAdmin\\LionAdmin.Service\\LionAdmin.Service.csproj",
+      "projectPath": "E:\\PersonalProjects\\LionAdminSystem\\LionAdmin.Service\\LionAdmin.Service.csproj",
       "packagesPath": "C:\\Users\\Estrats\\.nuget\\packages\\",
-      "outputPath": "E:\\PersonalProjects\\LionAdmin\\LionAdmin.Service\\obj\\",
+      "outputPath": "E:\\PersonalProjects\\LionAdminSystem\\LionAdmin.Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -7013,8 +7013,8 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "E:\\PersonalProjects\\LionAdmin\\LionAdmin.Repository\\LionAdmin.Repository.csproj": {
-              "projectPath": "E:\\PersonalProjects\\LionAdmin\\LionAdmin.Repository\\LionAdmin.Repository.csproj"
+            "E:\\PersonalProjects\\LionAdminSystem\\LionAdmin.Repository\\LionAdmin.Repository.csproj": {
+              "projectPath": "E:\\PersonalProjects\\LionAdminSystem\\LionAdmin.Repository\\LionAdmin.Repository.csproj"
             }
           }
         }

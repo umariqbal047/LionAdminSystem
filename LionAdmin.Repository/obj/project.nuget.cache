@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z3pCT9pme67Y3VztDnLD20N0fgTwYNVhygqNvNAqy1x73h6+2vF7+cQUieNBQcabrsSeRYYkPXJMQ3+i5wMLoQ==",
+  "dgSpecHash": "p7qp53yvZx6uZtMkHivGZkCSoaB1oAdMcSECndpKayLfpOhPZHvaEzcyxO3Y1pftsaNbQ3x/Vx7C7LNHhlu8Ng==",
   "success": true,
-  "projectFilePath": "E:\\PersonalProjects\\LionAdmin\\LionAdmin.Repository\\LionAdmin.Repository.csproj",
+  "projectFilePath": "E:\\PersonalProjects\\LionAdminSystem\\LionAdmin.Repository\\LionAdmin.Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Estrats\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.9\\microsoft.aspnetcore.cryptography.internal.3.1.9.nupkg.sha512",
     "C:\\Users\\Estrats\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.9\\microsoft.aspnetcore.cryptography.keyderivation.3.1.9.nupkg.sha512",
